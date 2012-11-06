@@ -36,4 +36,18 @@ public class Trades{
 		}
 		return null;
 	}
+	public static void removeFromQueue(Player player){
+		if(getQueue().containsKey(player.getName())){
+			getQueue().remove(player.getName());
+			return;
+		}
+		else if(getQueue().containsValue(player.getName())){
+			for(final String s : getQueue().keySet()){
+				if(getQueue().get(s) == player.getName()){
+					getQueue().remove(s);
+					return;
+				}
+			}
+		}
+	}
 }

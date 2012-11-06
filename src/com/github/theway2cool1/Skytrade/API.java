@@ -1,5 +1,7 @@
 package com.github.theway2cool1.Skytrade;
 
+import java.util.HashMap;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.CommandSender;
@@ -34,5 +36,13 @@ public class API{
 		else{
 			sender.sendMessage(ChatColor.RED+ "Player can't be found!");
 		}
+	}
+	public static String getKeyByValue(String value, HashMap<String, String> hashmap){
+		for(final String s : hashmap.keySet()){
+			if(hashmap.get(s).equals(value)){
+				return s;
+			}
+		}
+		return null;
 	}
 }
