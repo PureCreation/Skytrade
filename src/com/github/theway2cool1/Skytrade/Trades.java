@@ -28,4 +28,12 @@ public class Trades{
 		}
 		return false;
 	}
+	public static Trade getPlayerTrade(Player player){
+		for(final Trade t: getAllTrades()){
+			if(t.getMainTrader() == player || t.getSecondaryTrader() == player){
+				return t;
+			}
+		}
+		return null;
+	}
 }
