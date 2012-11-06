@@ -31,7 +31,7 @@ public class API{
 			sender.sendMessage(ChatColor.GREEN+ invited.getName() + " has been invited to trade!");
 			invited.sendMessage(ChatColor.DARK_AQUA + sender.getName() + ChatColor.GOLD + " wants to trade.");
 			invited.sendMessage(ChatColor.GOLD + "Type " + ChatColor.GREEN + "/trade accept" + ChatColor.GOLD + " to accept.");
-			invited.sendMessage(ChatColor.GOLD + "Or type " + ChatColor.RED + "/trade deny" + ChatColor.GOLD + " to deny.");
+			invited.sendMessage(ChatColor.GOLD + "Or type " + ChatColor.BLUE + "/trade deny" + ChatColor.GOLD + " to deny.");
 		}
 		else{
 			sender.sendMessage(ChatColor.RED+ "Player can't be found!");
